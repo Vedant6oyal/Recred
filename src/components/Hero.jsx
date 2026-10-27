@@ -4,6 +4,7 @@ import { EASE, rise } from '../anim';
 import { HERO_POINTS } from '../content';
 import { waLink } from '../whatsapp';
 import { Accent, btnGhost, btnWhatsApp } from './ui';
+import { Brand } from './Logo';
 import MatchEngine from './MatchEngine';
 import WhatsAppIcon from './WhatsAppIcon';
 
@@ -24,7 +25,7 @@ export default function Hero() {
       />
       <div aria-hidden className="absolute -right-56 -top-56 h-[40rem] w-[40rem] rounded-full bg-brand/10 blur-3xl" />
 
-      <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-5 pb-20 pt-10 sm:px-6 sm:pt-14 lg:grid-cols-[1.1fr_0.9fr] lg:gap-10 lg:pb-28 lg:pt-20">
+      <div className="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-14 px-5 pb-20 pt-10 sm:px-6 sm:pt-14 lg:grid-cols-[1.1fr_0.9fr] lg:gap-10 lg:pb-28 lg:pt-20">
         <div>
           <motion.div
             {...rise(0)}
@@ -48,9 +49,7 @@ export default function Hero() {
           </h1>
 
           <motion.p {...rise(0.5)} className="mt-7 max-w-xl text-lg leading-relaxed text-muted">
-            Recred is a fintech platform that finds the perfect lending partner for mid-size and large enterprises. Our
-            proprietary AI and top debt strategists match your requirement with the best-fit banks and NBFCs, and secure
-            the best terms.
+            <Brand /> is an AI-powered debt advisory platform that connects mid-market and large enterprises with the right lending partners. By combining proprietary AI with expert debt strategists, we match your financing requirements with the most suitable banks and NBFCs to secure the best possible terms.
           </motion.p>
 
           <motion.div {...rise(0.6)} className="mt-9 flex flex-wrap gap-3">

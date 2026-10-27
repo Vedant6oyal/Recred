@@ -8,7 +8,7 @@ export default function WhatsAppButton() {
       href={waLink()}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Chat with Recred on WhatsApp"
+      aria-label="Chat with ReCred on WhatsApp"
       className="group fixed z-[60] flex items-center gap-3 rounded-full focus-visible:outline-none"
       style={{ right: 'max(1.25rem, env(safe-area-inset-right))', bottom: 'max(1.25rem, env(safe-area-inset-bottom))' }}
       initial={{ opacity: 0, scale: 0.6 }}

@@ -5,19 +5,18 @@ import { Accent, Heading, Section } from './ui';
 
 const pos = (cr) => (Math.log10(cr) / 3) * 100;
 const FROM = pos(10);
-const TO = pos(250);
 const VIEW = { once: true, margin: '-60px' };
 
 export default function Audience() {
   return (
     <Section id="who">
-      <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+      <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
         <div>
           <Heading
             eyebrow="Who it’s for"
             title={
               <>
-                Built for businesses raising <Accent>₹10 Cr to ₹250 Cr.</Accent>
+                Built for businesses raising <Accent>₹10 Cr and above.</Accent>
               </>
             }
             intro="SMEs, mid-market companies and large enterprises across sectors, whether you are raising fresh debt or refinancing an existing loan."
@@ -44,44 +43,37 @@ export default function Audience() {
             <span className="text-brand">Our sweet spot</span>
           </div>
 
-          <div className="mt-6 flex flex-wrap items-baseline gap-x-3 text-[40px] font-semibold tracking-[-0.03em] tabular-nums sm:text-5xl">
-            <CountUp value="₹10 Cr" duration={1.2} />
-            <span className="text-lg font-normal tracking-normal text-muted">to</span>
-            <CountUp value="₹250 Cr" duration={1.6} />
+          <div className="mt-6 text-[40px] font-semibold tracking-[-0.03em] tabular-nums sm:text-5xl">
+            <CountUp value="₹10 Cr+" duration={1.4} />
           </div>
 
           <div className="relative mt-12">
             <div className="h-2 rounded-full bg-line" />
             <motion.div
-              className="absolute top-0 h-2 origin-left rounded-full bg-linear-to-r from-brand to-aqua"
-              style={{ left: `${FROM}%`, width: `${TO - FROM}%` }}
+              className="absolute top-0 h-2 origin-left rounded-r-full bg-linear-to-r from-brand via-aqua to-aqua/0"
+              style={{ left: `${FROM}%`, width: `${100 - FROM}%` }}
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
               viewport={VIEW}
-              transition={{ duration: 1.4, ease: EASE, delay: 0.3 }}
+              transition={{ duration: 1.6, ease: EASE, delay: 0.3 }}
             />
-            {[FROM, TO].map((p, i) => (
-              <motion.span
-                key={p}
-                className="absolute -top-1 h-4 w-4 rounded-full border-[3px] border-white bg-brand shadow-[0_2px_8px_rgba(47,91,255,0.5)]"
-                style={{ left: `calc(${p}% - 8px)` }}
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                viewport={VIEW}
-                transition={{ type: 'spring', stiffness: 400, damping: 18, delay: 0.3 + i * 1.3 }}
-              />
-            ))}
+            <motion.span
+              className="absolute -top-1 h-4 w-4 rounded-full border-[3px] border-white bg-brand shadow-[0_2px_8px_rgba(47,91,255,0.5)]"
+              style={{ left: `calc(${FROM}% - 8px)` }}
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              viewport={VIEW}
+              transition={{ type: 'spring', stiffness: 400, damping: 18, delay: 0.3 }}
+            />
           </div>
           <div className="relative mt-3 h-5 text-xs font-semibold">
             <span className="absolute -translate-x-1/2" style={{ left: `${FROM}%` }}>
               ₹10 Cr
             </span>
-            <span className="absolute -translate-x-1/2" style={{ left: `${TO}%` }}>
-              ₹250 Cr
-            </span>
+            <span className="absolute right-0 text-muted">No upper limit</span>
           </div>
 
-          <div className="mt-8 grid gap-3 sm:grid-cols-2">
+          <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
             {AUDIENCES.map(({ title, desc }) => (
               <div key={title} className="rounded-2xl bg-mist p-4">
                 <div className="text-[15px] font-semibold">{title}</div>
@@ -90,7 +82,7 @@ export default function Audience() {
             ))}
           </div>
           <p className="mt-5 text-sm text-muted">
-            Larger requirement?{' '}
+            Raising ₹10 Cr or more?{' '}
             <a href="#contact" className="font-medium text-brand hover:underline">
               Let’s talk.
             </a>

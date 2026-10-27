@@ -7,5 +7,5 @@ export const telHref = (phone) => `tel:${phone.replace(/[^\d+]/g, '')}`;
 
 export const composeMessage = (need, size) =>
   need || size
-    ? `Hi Recred, I’m looking for ${need ? need.text : 'debt financing'}${size ? ` of ${size}` : ''} for my company. Please get in touch.`
+    ? `Hi ReCred, I’m looking for ${need ? need.text : 'debt financing'}${size ? ` of ${size}` : ''} for my company. Please get in touch.`
     : WHATSAPP_MESSAGE;

@@ -20,7 +20,7 @@ export default function Header() {
       }`}
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-6 px-5 sm:px-6">
-        <a href="#top" aria-label="Recred home" className="rounded-lg focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-brand/20">
+        <a href="#top" aria-label="ReCred home" className="rounded-lg focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-brand/20">
           <Logo />
         </a>
         <nav aria-label="Primary" className="hidden items-center gap-8 text-sm text-muted md:flex">

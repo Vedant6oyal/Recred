@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { BadgeCheck, Check } from 'lucide-react';
 import { EASE, Reveal, Stagger, StaggerItem } from '../anim';
 import { TEAM } from '../content';
+import { Brand, withBrand } from './Logo';
 import { Accent, Heading, Section } from './ui';
 
 export default function Team() {
@@ -15,14 +16,14 @@ export default function Team() {
             The strategists behind <Accent>every match.</Accent>
           </>
         }
-        intro="Our AI finds the options. Our people secure the terms. Recred is backed by a team of 40+ debt strategists and credit experts, led by Mr. R.K. Goyal."
+        intro={<>Our AI finds the options. Our people secure the terms. <Brand /> is backed by a team of 20+ debt strategists and credit experts, led by Mr. R.K. Goyal.</>}
       />
 
-      <Reveal className="grid overflow-hidden rounded-[28px] border border-line bg-white lg:grid-cols-[0.82fr_1.18fr]">
+      <Reveal className="grid grid-cols-1 overflow-hidden rounded-[28px] border border-line bg-white lg:grid-cols-[0.82fr_1.18fr]">
         <div className="relative aspect-[4/5] overflow-hidden bg-mist lg:aspect-auto lg:min-h-[560px]">
           <motion.img
             src={lead.photo}
-            alt={`${lead.name}, ${lead.role} at Recred`}
+            alt={`${lead.name}, ${lead.role} at ReCred`}
             className="absolute inset-0 h-full w-full object-cover object-[50%_15%]"
             initial={{ scale: 1.08 }}
             whileInView={{ scale: 1 }}
@@ -37,7 +38,7 @@ export default function Team() {
           <h3 className="mt-4 text-3xl font-semibold tracking-[-0.03em] sm:text-4xl">{lead.name}</h3>
           <div className="mt-5 space-y-4 text-[15px] leading-relaxed text-muted sm:text-base">
             {lead.bio.map((p) => (
-              <p key={p.slice(0, 32)}>{p}</p>
+              <p key={p.slice(0, 32)}>{withBrand(p)}</p>
             ))}
           </div>
           <ul className="mt-7 grid gap-3 sm:grid-cols-2">
@@ -57,7 +58,7 @@ export default function Team() {
         <Stagger className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {rest.map((m) => (
             <StaggerItem key={m.name} className="overflow-hidden rounded-3xl border border-line bg-white">
-              <img src={m.photo} alt={`${m.name}, ${m.role} at Recred`} className="aspect-[4/5] w-full object-cover object-top" />
+              <img src={m.photo} alt={`${m.name}, ${m.role} at ReCred`} className="aspect-[4/5] w-full object-cover object-top" />
               <div className="p-5">
                 <div className="font-semibold">{m.name}</div>
                 <div className="mt-0.5 text-sm text-muted">{m.role}</div>

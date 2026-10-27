@@ -5,13 +5,13 @@ import { Building2, Handshake, Landmark, MessageSquareText, Sparkles } from 'luc
 /* ------------------------------------------------------------------ */
 
 export const CONTACT = {
-  whatsapp: '91XXXXXXXXXX',
-  phone: '+91 XXXXX XXXXX',
-  email: 'hello@yourdomain.com',
-  office: 'Your office address, City',
+  whatsapp: '919599959772',
+  phone: '+91 95999 59772',
+  email: 'vedant@recred.in',
+  office: 'Office 2/9, Near Cyber Hub, DLF Phase 3, Gurugram',
 };
 
-export const WHATSAPP_MESSAGE = 'Hi Recred, I’d like to discuss a debt requirement for my company.';
+export const WHATSAPP_MESSAGE = 'Hi ReCred, I’d like to discuss a debt requirement for my company.';
 
 export const NAV = [
   { label: 'How it works', href: '#how' },
@@ -24,7 +24,7 @@ export const NAV = [
 /* Hero                                                                */
 /* ------------------------------------------------------------------ */
 
-export const HERO_POINTS = ['Debt from ₹10 Cr to ₹250 Cr', 'Banks, NBFCs & institutions', 'AI-powered, expert-led'];
+export const HERO_POINTS = ['Debt requirements of ₹10 Cr+', 'Banks, NBFCs & institutions', 'AI-powered, expert-led'];
 
 export const LENDERS = [
   { type: 'State Bank of India', short: 'SBI', icon: Landmark },
@@ -164,7 +164,7 @@ export const TEAM = [
     photo: '/rk-goyal.jpg',
     bio: [
       'For over 37 years, Mr. Goyal has helped enterprises raise capital on the best terms through India’s leading banks, NBFCs and financial institutions. Regarded as one of Delhi NCR’s foremost debt syndication advisors, he has built deep, long-standing relationships with senior decision-makers across the lending ecosystem, and has syndicated debt in India and abroad.',
-      'At Recred, he leads our debt strategy desk, making sure every match is structured, negotiated and closed on the most favourable terms. His approach is simple: understand the business first, then take the best possible structure to the lenders most likely to say yes.',
+      'At ReCred, he leads our debt strategy desk, making sure every match is structured, negotiated and closed on the most favourable terms. His approach is simple: understand the business first, then take the best possible structure to the lenders most likely to say yes.',
     ],
     points: [
       '37+ years in project finance & debt syndication',
@@ -186,5 +186,5 @@ export const NEEDS = [
   { label: 'Term loan', text: 'a term loan' },
   { label: 'Working capital', text: 'working capital' },
   { label: 'Project finance', text: 'project finance' },
-  { label: 'Refinance a loan', text: 'refinancing of an existing loan' },
+  { label: 'Loan transfer', text: 'a loan transfer' },
 ];

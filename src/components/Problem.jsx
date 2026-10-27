@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 import { Check, X } from 'lucide-react';
 import { EASE, Reveal } from '../anim';
 import { PROBLEM } from '../content';
-import { LogoMark } from './Logo';
+import { Brand, LogoMark } from './Logo';
 import { Accent, Heading, Section } from './ui';
 
 const VIEW = { once: true, margin: '-80px' };
@@ -19,10 +19,10 @@ export default function Problem() {
             Raising debt shouldn’t be <Accent>guesswork.</Accent>
           </>
         }
-        intro="Mid-size and large companies often lack an efficient way to identify the most suitable lenders and secure the best possible borrowing terms. Recred changes that."
+        intro={<>Mid-size and large companies often lack an efficient way to identify the most suitable lenders and secure the best possible borrowing terms. <Brand /> changes that.</>}
       />
 
-      <div className="grid gap-5 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
         <Reveal className="rounded-3xl border border-line bg-mist p-7 sm:p-9">
           <div className="text-sm font-semibold text-muted">The usual way</div>
           <motion.ul className="mt-4" initial="hidden" whileInView="show" viewport={VIEW} variants={list(0.3)}>
@@ -51,7 +51,7 @@ export default function Problem() {
           className="rounded-3xl border border-brand/25 bg-white p-7 shadow-[0_30px_80px_-40px_rgba(47,91,255,0.45)] sm:p-9"
         >
           <div className="flex items-center gap-2 text-sm font-semibold text-brand">
-            <LogoMark size={20} /> The Recred way
+            <LogoMark size={20} /> <span className="text-ink">The</span>&nbsp;<Brand />&nbsp;<span className="text-ink">way</span>
           </div>
           <motion.ul className="mt-4" initial="hidden" whileInView="show" viewport={VIEW} variants={list(1.1)}>
             {PROBLEM.recred.map((t) => (

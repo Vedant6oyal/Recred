@@ -30,7 +30,7 @@ export default function HowItWorks() {
           />
         </div>
 
-        <ol className="grid gap-12 lg:grid-cols-3 lg:gap-8">
+        <ol className="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-8">
           {STEPS.map(({ icon: Icon, title, desc }, i) => (
             <li key={title} className="relative flex gap-5 lg:flex-col lg:items-center lg:text-center">
               {i < STEPS.length - 1 && (

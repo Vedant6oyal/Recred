@@ -36,7 +36,7 @@ export default function Contact() {
 
   return (
     <Section id="contact">
-      <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+      <div className="grid grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
         <div>
           <Heading
             eyebrow="Contact"
@@ -63,7 +63,7 @@ export default function Contact() {
                   </span>
                   <span className="min-w-0">
                     <span className="block text-xs text-muted">{label}</span>
-                    <span className="block truncate text-[15px] font-medium">{value}</span>
+                    <span className="block text-[15px] font-medium [overflow-wrap:anywhere]">{value}</span>
                   </span>
                   {href && <ArrowUpRight size={16} className="ml-auto shrink-0 text-muted" />}
                 </Row>

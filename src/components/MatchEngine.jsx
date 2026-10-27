@@ -3,6 +3,7 @@ import { AnimatePresence, motion, useInView, useReducedMotion } from 'motion/rea
 import { BadgeCheck, Check, LoaderCircle, ShieldCheck, Sparkles } from 'lucide-react';
 import { EASE, rise } from '../anim';
 import { LENDERS, MATCH_SCENARIOS } from '../content';
+import { Brand } from './Logo';
 
 const PHASES = [
   { at: 0, label: 'Reading your requirement' },
@@ -88,7 +89,7 @@ export default function MatchEngine() {
 
       <div
         role="img"
-        aria-label="Illustration: Recred's AI scans lenders and its experts shortlist the three best-fit lenders for a sample loan requirement"
+        aria-label="Illustration: ReCred's AI scans lenders and its experts shortlist the three best-fit lenders for a sample loan requirement"
         className="rounded-[28px] border border-line bg-white p-5 shadow-[0_40px_100px_-45px_rgba(11,18,32,0.35)] sm:p-6"
       >
         <div className="flex items-center justify-between gap-3">
@@ -97,7 +98,7 @@ export default function MatchEngine() {
               <span className="absolute inline-flex h-full w-full rounded-full bg-brand/50 motion-safe:animate-ping" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-brand" />
             </span>
-            Recred Match Engine
+            <span><Brand /> Match Engine</span>
           </div>
           <AnimatePresence mode="wait" initial={false}>
             <motion.span

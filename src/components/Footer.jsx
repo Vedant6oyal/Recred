@@ -1,5 +1,5 @@
 import { NAV } from '../content';
-import Logo from './Logo';
+import Logo, { Brand } from './Logo';
 
 export default function Footer() {
   return (
@@ -19,9 +19,9 @@ export default function Footer() {
       </div>
       <div className="border-t border-line">
         <div className="mx-auto flex max-w-6xl flex-col gap-2 px-5 pb-24 pt-6 text-xs leading-relaxed text-muted sm:px-6 md:flex-row md:justify-between md:pb-6">
-          <p>© {new Date().getFullYear()} Recred. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} <Brand />. All rights reserved.</p>
           <p className="max-w-xl md:text-right">
-            Recred is a debt advisory platform and does not lend. Credit decisions, sanction and disbursement rest with the
+            <Brand /> is a debt advisory platform and does not lend. Credit decisions, sanction and disbursement rest with the
             lenders.
           </p>
         </div>
