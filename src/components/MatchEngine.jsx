@@ -13,7 +13,7 @@ const PHASES = [
 ];
 const CYCLE_MS = 8800;
 const COLS = 4;
-const C = { line: '#e6e8ee', brand: '#2f5bff', tint: '#eef2ff', white: '#ffffff' };
+const C = { line: '#e6e8ee', brand: '#c28e0e', tint: '#fdf5dc', white: '#ffffff' };
 const label = 'text-[10px] font-semibold uppercase tracking-[0.16em] text-muted';
 
 function nodeMotion(phase, picked, col) {

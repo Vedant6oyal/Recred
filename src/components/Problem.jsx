@@ -48,7 +48,7 @@ export default function Problem() {
 
         <Reveal
           delay={0.1}
-          className="rounded-3xl border border-brand/25 bg-white p-7 shadow-[0_30px_80px_-40px_rgba(47,91,255,0.45)] sm:p-9"
+          className="rounded-3xl border border-brand/25 bg-white p-7 shadow-[0_30px_80px_-40px_color-mix(in_oklab,var(--color-brand)_45%,transparent)] sm:p-9"
         >
           <div className="flex items-center gap-2 text-sm font-semibold text-brand">
             <LogoMark size={20} /> <span className="text-ink">The</span>&nbsp;<Brand />&nbsp;<span className="text-ink">way</span>

@@ -58,7 +58,7 @@ export default function Audience() {
               transition={{ duration: 1.6, ease: EASE, delay: 0.3 }}
             />
             <motion.span
-              className="absolute -top-1 h-4 w-4 rounded-full border-[3px] border-white bg-brand shadow-[0_2px_8px_rgba(47,91,255,0.5)]"
+              className="absolute -top-1 h-4 w-4 rounded-full border-[3px] border-white bg-brand shadow-[0_2px_8px_color-mix(in_oklab,var(--color-brand)_50%,transparent)]"
               style={{ left: `calc(${FROM}% - 8px)` }}
               initial={{ scale: 0 }}
               whileInView={{ scale: 1 }}

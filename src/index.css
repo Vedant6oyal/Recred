@@ -9,8 +9,8 @@
   --color-muted: #5b6475;
   --color-line: #e6e8ee;
   --color-mist: #f6f7f9;
-  --color-brand: #2f5bff;
-  --color-aqua: #19c3e6;
+  --color-brand: #c28e0e;
+  --color-aqua: #ffd966;
   --color-whatsapp: #25d366;
 
   --animate-marquee: marquee 70s linear infinite;
@@ -42,7 +42,7 @@
     cursor: pointer;
   }
   ::selection {
-    background: rgb(47 91 255 / 0.18);
+    background: color-mix(in oklab, var(--color-brand) 18%, transparent);
   }
 }
 
