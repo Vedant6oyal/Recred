@@ -157,6 +157,12 @@ export const LOAN_TYPES = [
 /* Team                                                                */
 /* ------------------------------------------------------------------ */
 
+export const ADVISOR = {
+  name: 'Mr. Vedant',
+  role: 'Head of Customer Success',
+  photo: '/advisor.png',
+};
+
 export const TEAM = [
   {
     name: 'Mr. R.K. Goyal',

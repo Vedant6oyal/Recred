@@ -1,12 +1,11 @@
 import { motion } from 'motion/react';
 import { ArrowRight, Check, Sparkles } from 'lucide-react';
 import { EASE, rise } from '../anim';
-import { HERO_POINTS } from '../content';
+import { ADVISOR, HERO_POINTS } from '../content';
 import { waLink } from '../whatsapp';
-import { Accent, btnGhost, btnWhatsApp } from './ui';
+import { Accent, btnGhost } from './ui';
 import { Brand } from './Logo';
 import MatchEngine from './MatchEngine';
-import WhatsAppIcon from './WhatsAppIcon';
 
 const LINES = [
   <>The right lender.</>,
@@ -52,9 +51,27 @@ export default function Hero() {
             <Brand /> is an AI-powered debt advisory platform that connects mid-market and large enterprises with the right lending partners. By combining proprietary AI with expert debt strategists, we match your financing requirements with the most suitable banks and NBFCs to secure the best possible terms.
           </motion.p>
 
-          <motion.div {...rise(0.6)} className="mt-9 flex flex-wrap gap-3">
-            <a href={waLink()} target="_blank" rel="noopener noreferrer" className={btnWhatsApp}>
-              <WhatsAppIcon /> Chat on WhatsApp
+          <motion.div {...rise(0.6)} className="mt-9 flex flex-wrap items-center gap-3">
+            <a
+              href={waLink()}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-3.5 rounded-full bg-ink py-2 pl-2 pr-7 text-white transition duration-200 hover:bg-ink-2 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-brand/25"
+            >
+              <span className="relative shrink-0">
+                <img
+                  src={ADVISOR.photo}
+                  alt={ADVISOR.name}
+                  className="h-12 w-12 rounded-full object-cover object-[50%_15%] ring-2 ring-white/90"
+                />
+                <span aria-hidden className="absolute bottom-0 right-0 h-3 w-3 rounded-full bg-whatsapp ring-2 ring-ink" />
+              </span>
+              <span className="flex flex-col text-left leading-tight">
+                <span className="text-[15px] font-medium">Talk To Our Executive</span>
+                <span className="mt-1 text-xs text-white/60">
+                  {ADVISOR.name} · {ADVISOR.role}
+                </span>
+              </span>
             </a>
             <a href="#how" className={btnGhost}>
               See how it works <ArrowRight size={16} />

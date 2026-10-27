@@ -3,7 +3,7 @@ import { ArrowUpRight, Mail, MapPin, Phone } from 'lucide-react';
 import { Reveal } from '../anim';
 import { CONTACT, LOAN_SIZES, NEEDS } from '../content';
 import { composeMessage, telHref, waLink } from '../whatsapp';
-import { Accent, Heading, Section, btnWhatsApp } from './ui';
+import { Accent, Heading, Section, btnDark } from './ui';
 import WhatsAppIcon from './WhatsAppIcon';
 
 const legend = 'text-xs font-semibold uppercase tracking-[0.16em] text-muted';
@@ -115,8 +115,8 @@ export default function Contact() {
             </p>
           </div>
 
-          <a href={waLink(message)} target="_blank" rel="noopener noreferrer" className={`${btnWhatsApp} mt-5 w-full py-4`}>
-            <WhatsAppIcon /> Continue on WhatsApp
+          <a href={waLink(message)} target="_blank" rel="noopener noreferrer" className={`${btnDark} mt-5 w-full py-4`}>
+            <WhatsAppIcon className="h-5 w-5 text-whatsapp" /> Continue on WhatsApp
           </a>
           <p className="mt-3 text-center text-xs text-muted">Opens WhatsApp with your message ready to send.</p>
         </Reveal>
